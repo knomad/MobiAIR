@@ -15,7 +15,7 @@ package
 			stage.scaleMode = StageScaleMode.NO_SCALE;
 			
 			var text:TextField = new TextField();
-			text.text = "Hello github ;)";
+			text.text = "Hello github, test update";
 			addChild(text);
 		}
 	}
