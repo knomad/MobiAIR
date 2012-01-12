@@ -2,6 +2,7 @@ package Examples
 {
 	public final class Assets
 	{
+		
 		[Embed(source="Assets.swf",symbol="FX_TorpidoExplosion")]
 		public static var FX_TorpidoExplosion:Class;
 		
