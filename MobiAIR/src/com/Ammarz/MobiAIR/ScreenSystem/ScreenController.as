@@ -9,6 +9,7 @@
 	import flash.system.System;
 	import flash.ui.Keyboard;
 	import flash.ui.Multitouch;
+	import flash.ui.MultitouchInputMode;
 	
 	public class ScreenController extends Sprite {
 		
@@ -43,6 +44,7 @@
 		final public function ScreenController(touchScreenMode:int = 0) {
 			_lockControls = false;
 			autoFreeControls = true;
+			_useBackButton = true;
 			if (touchScreenMode == 0)
 			{
 				switch (Capabilities.os.substr(0,3))
@@ -53,6 +55,7 @@
 						break;
 					default:
 						_touchScreenMode = true;
+						Multitouch.inputMode = MultitouchInputMode.TOUCH_POINT;
 				}
 			}else if (touchScreenMode == 1) _touchScreenMode = false; else _touchScreenMode = true;
 		}

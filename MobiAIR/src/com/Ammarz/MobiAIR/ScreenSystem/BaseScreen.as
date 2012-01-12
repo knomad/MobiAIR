@@ -146,7 +146,7 @@
 			}
 			if (action != null)
 			{
-				var hotspot:Rectangle = new Rectangle(xpos,ypos,displayObject.width * MobiAIR.globalScale,displayObject.height * scl);
+				var hotspot:Rectangle = new Rectangle(xpos,ypos,displayObject.width * scl,displayObject.height * scl);
 				_buttons.push(hotspot);
 				_buttonActions.push(action);
 				_names.push(displayObject.name);
