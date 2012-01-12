@@ -38,7 +38,10 @@ package
 			//resolution, so it makes multiscreen development easier
 			//here I am using 320 (3gs) as a base
 			MobiAIR.globalScale = stage.stageWidth / 320;
+			
+			//show fps on the top-left side of the screen
 			MobiAIR.enableFPS();
+			
 			//now show Example one ... go check it out right now!
 			MobiAIR.setScreen(new E1_BasicSprite());
 		}

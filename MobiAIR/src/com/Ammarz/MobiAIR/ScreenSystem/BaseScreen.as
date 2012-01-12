@@ -97,20 +97,21 @@
 		
 		/**
 		 * takes a movieclipt, renders it to a bitmap, adds it to the screen and automatically check for touch input if you pass a function to be called back
-		 * the GUI will be placed based on the x and y of the DisplayObject you passed and it will take globalScale to count.
+		 * the GUI will be placed based on the x and y of the DisplayObject you passed and it will be multiplied by the global scale.
 		 * @param displayObject the flash object to be rendered
 		 * @param action the function to call if the user touched or clicked the gui
 		 * @param noGraphic will not display the graphic, but use its coordinates to check for user input
 		 * @param bMode "button mode" adds a little animation, its experimental so I don't suggest using it
 		 * @param autoRemove automatically removes the movieClip you used from its parent if it has one
+		 * @param scale applies additional scale to the object, will not affect the position
 		 * @param useGlobalScaling automatically scale the rendered bitmap to the global scaling
 		 * @param usePositionScaling automatically multiply the position by global scale
 		 * */
-		final protected function setupStaticGUI(displayObject:MovieClip,action:Function = null,noGraphic:Boolean = false,bMode:Boolean = false,autoRemove:Boolean=true,useGlobalScaling:Boolean = true,usePositionScaling:Boolean = false):Bitmap
+		final protected function setupStaticGUI(displayObject:MovieClip,action:Function = null,noGraphic:Boolean = false,bMode:Boolean = false,autoRemove:Boolean=true,scale:Number = 1,useGlobalScaling:Boolean = true,usePositionScaling:Boolean = false):Bitmap
 		{
 			var bitmapGUI:Bitmap;
 			
-			var scl:Number = useGlobalScaling ? MobiAIR.globalScale : 1;
+			var scl:Number = useGlobalScaling ? MobiAIR.globalScale * scale : scale;
 			var pscl:Number = usePositionScaling ? MobiAIR.globalScale : 1;
 			
 			var xpos:Number = displayObject.x * pscl;

@@ -1,7 +1,5 @@
 ﻿package com.Ammarz.MobiAIR
 {
-	
-	import com.GameHelpers.GameMath;
 	import com.Ammarz.MobiAIR.Graphics.BlitSprite_WIP.AnimatedSprite;
 	import com.Ammarz.MobiAIR.Graphics.Animation;
 	import com.Ammarz.MobiAIR.Graphics.DisplayObject.MobiSprite;
@@ -350,39 +348,6 @@
 		public static function mcToAnimationAutoScale(mc:MovieClip,w:Number = 0,h:Number = 0,scale:Number = 1,makeMirror:Boolean = false,animSpeed:Number = 1,loop:Boolean = true,off:Point = null,ret:int = -1,firstFrame:uint = 1,lastFrame:uint = 0):Animation
 		{
 			return mcToAnimation(mc,w*scale,h*scale,scale,makeMirror,animSpeed,loop,off,ret,firstFrame,lastFrame);
-		}
-		
-		
-		public static function makeText(textFormat:TextFormat,txt:String = "",x:int = 0,y:int = 0):TextField
-		{
-			var newTF:TextField = new TextField();
-			newTF.autoSize = TextFieldAutoSize.LEFT;
-			//newTF.embedFonts = true;
-			newTF.selectable = false;
-			newTF.defaultTextFormat = textFormat;
-			newTF.textColor = GameMath.RGB2Hex(0,0,0);
-			newTF.antiAliasType = AntiAliasType.ADVANCED;
-			newTF.text = txt;
-			//newTF.defaultTextFormat.size = 20;
-			newTF.x = x;
-			newTF.y = y;
-			
-			return newTF;
-		}
-		
-		public static function makeTextFormat(font:String):TextFormat
-		{
-			var newTF:TextFormat = new TextFormat();
-			//newTF.font = font;
-			newTF.color = 0x000000;
-			newTF.size = 25;
-			return newTF;
-		}
-		
-		public static function getAsset(swf:MovieClip,className:String):Class
-		{
-			//var dynClass : Class = Class(getDefinitionByName(("fully.qualified.ClassName"));
-			return Class(getDefinitionByName((className)));
 		}
 	}
 }

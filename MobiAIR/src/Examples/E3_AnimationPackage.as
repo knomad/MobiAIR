@@ -71,9 +71,9 @@ package Examples
 			for (i = 1 ; i <= 4 ; i++)
 			{
 				btnMC.name = "d" + i.toString();
-				btnMC.x = MobiAIR.applyScale(30) + i * (MobiAIR.applyScale(btnMC.width + 10));
-				btnMC.y = MobiAIR.stage.stageHeight - MobiAIR.applyScale(50);
-				setupStaticGUI(btnMC,handleButtons,false,true,false);
+				btnMC.x = MobiAIR.applyScale(45) + (i - 1) * (MobiAIR.applyScale(btnMC.width + 22));
+				btnMC.y = MobiAIR.stage.stageHeight - MobiAIR.applyScale(120);
+				setupStaticGUI(btnMC,handleButtons,false,true,false,1.5);
 			}
 		}
 		
