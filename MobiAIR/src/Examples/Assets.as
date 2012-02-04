@@ -12,17 +12,19 @@ package Examples
 		[Embed(source="Assets.swf",symbol="BTN_Prev")]
 		public static var BTN_Prev:Class;
 		
-		[Embed(source="Assets.swf",symbol="SHIPS_HERO_Damaged1")]
-		public static var ship_Damaged1:Class;
-		
-		[Embed(source="Assets.swf",symbol="SHIPS_HERO_Damaged2")]
-		public static var ship_Damaged2:Class;
-		
-		[Embed(source="Assets.swf",symbol="SHIPS_HERO_Damaged3")]
-		public static var ship_Damaged3:Class;
-		
-		[Embed(source="Assets.swf",symbol="SHIPS_HERO_Damaged4")]
 		public static var ship_Damaged4:Class;
+		
+		[Embed(source="Assets.swf",symbol="sprite_char_1")]
+		public static var char1:Class;
+		
+		[Embed(source="Assets.swf",symbol="sprite_char_2")]
+		public static var char2:Class;
+		
+		[Embed(source="Assets.swf",symbol="sprite_char_3")]
+		public static var char3:Class;
+		
+		[Embed(source="Assets.swf",symbol="sprite_char_4")]
+		public static var char4:Class;
 		
 		[Embed(source="Assets.swf",symbol="BOX_Purple")]
 		public static var PurpleBox:Class;

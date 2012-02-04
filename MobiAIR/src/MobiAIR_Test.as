@@ -10,7 +10,7 @@ package
 	import flash.events.Event;
 	import flash.text.TextField;
 	
-	[SWF(frameRate="30",backgroundColor="0x000000")]
+	[SWF(frameRate="60",backgroundColor="0x000000")]
 	public class MobiAIR_Test extends Sprite
 	{
 		public function MobiAIR_Test()
@@ -30,6 +30,7 @@ package
 			//this will initialize the engine, it will wait a bit till the stage adapts the screen resolution.
 			//then it will call the init function.
 			MobiAIR.init(this,init);
+			
 		}
 		
 		private function init():void

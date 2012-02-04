@@ -103,12 +103,17 @@ package Examples
 			//make screen title
 			var tf:TextField = new TextField();
 			tf.multiline = true;
-			tf.defaultTextFormat = new TextFormat(null,MobiAIR.applyScale(20),0x33CCFF,null,null,null,null,null,HorizontalAlign.CENTER);
+			tf.defaultTextFormat = new TextFormat(null,20,0x33CCFF,null,null,null,null,null,HorizontalAlign.CENTER);
 			tf.x = 0;
 			tf.y = MobiAIR.applyScale(10);
 			tf.width = MobiAIR.stage.stageWidth;
 			tf.text = text;
 			addChild(tf);
+		}
+		
+		override public function handleAction(px:int,py:int,button:uint = 0):void
+		{
+			super.handleAction(px,py,button);
 		}
 	}
 }

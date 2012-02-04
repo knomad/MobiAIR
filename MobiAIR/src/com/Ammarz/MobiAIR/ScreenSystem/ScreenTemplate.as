@@ -5,12 +5,11 @@ package com.CardGame.Screens
 	import flash.display.Bitmap;
 	import flash.display.MovieClip;
 	
-	[Embed (source = "media/assets.swf",symbol="MainMenuUI")]
-	public final class MainMenu extends BaseScreen
+	public final class ScreenTemplate extends BaseScreen
 	{
 		//public var bg:MovieClip;
 
-		public function MainMenu()
+		public function ScreenTemplate()
 		{
 			super();
 		}

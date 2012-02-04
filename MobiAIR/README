@@ -1,14 +1,13 @@
 MobiAIR
 An AS3 engine made from the ground up to run as fast as possible on mobile devices using the display list after a lot of trials and errors, iOS in particular, it was tested mostly on iPod 4 and it could render around 130 sprites @ 30 FPS and it was reported to run decently on a 3GS but I did not see it myself.
 ------------------------
-The project was not intended to be used by someone else so most of the code isn't commented, but I added some comments the previous days and made some examples.
-------------------------
 Features:
 -Fast rendering of animated sprites on older iOS and other mobile devices
 -Tools to prerender vector MovieClips to bitmap frames which would save space and support different resolutions without having to include different sizes
 -automatically scale all graphics to match different screen resolutions
 -usefull functionality in sprites like playing backwards, looping, animation packages
--screen management, transition, 
+-automatic screen/scene handling and management with a fast fading transition
+-One ENTER_FRAME event updates the whole game you can use it by overriding the update function inside the BaseScreen class
 ------------------------
 How to use:
 check out the examples, and there's something important which is the renderMode (CPU/GPU which results in different results depending on the device, and AIR release, here's some examples:
@@ -19,8 +18,8 @@ AIR 2.5 - 2.6: gpu
 AIR 2.7: cpu
 AIR 3.0+: results are close, but I think gpu runs smoother
 -----------------------
-This is my first time ever sharing a project, so pardon me for the mistakes and the chaotic code! I will try to redesign some classes to be easier to use and more useful.
+Development on this engine is stopped since Stage3D is coming soon to mobile devices which will change everything forever! but its pretty much usable right now.
 -----------------------
-License: use it however you like, a credit would be nice though!
+License: use it however you like!
 -----------------------
 contact me: ammar@ammarz.com

@@ -1,6 +1,6 @@
 ﻿package com.Ammarz.MobiAIR
 {
-	import com.Ammarz.MobiAIR.Graphics.BlitSprite_WIP.AnimatedSprite;
+	import com.Ammarz.MobiAIR.Graphics.Blit.AnimatedSprite;
 	import com.Ammarz.MobiAIR.Graphics.Animation;
 	import com.Ammarz.MobiAIR.Graphics.DisplayObject.MobiSprite;
 	import com.Ammarz.MobiAIR.Graphics.DisplayObject.MobiSpriteM;

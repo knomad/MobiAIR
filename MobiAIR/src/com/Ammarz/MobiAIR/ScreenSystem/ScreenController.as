@@ -1,4 +1,6 @@
 ﻿package com.Ammarz.MobiAIR.ScreenSystem {
+	import com.Ammarz.MobiAIR.MobiAIR;
+	
 	import flash.display.Shape;
 	import flash.display.Sprite;
 	import flash.display.Stage;
@@ -195,12 +197,14 @@
 				}
 			}else
 			{
+				MobiAIR.stage.quality = "high";
 				_activeScreen = newScreen;
 				_activeScreen.init();
 				addChild(_activeScreen);
 				_activeScreen.x = 1;
 				_activeScreen.x = 0;
 				_activeScreen.visible = true;
+				MobiAIR.stage.quality = "low";
 			}
 		}
 		
@@ -237,7 +241,9 @@
 						_activeScreen.dispose();
 						_activeScreen = _nextScreen;
 						_nextScreen = null;
+						MobiAIR.stage.quality = "high";
 						_activeScreen.init();
+						MobiAIR.stage.quality = "low";
 						addChild(_activeScreen);
 						this.swapChildren(_activeScreen,_fader);
 						_waitTimer = 0;

@@ -112,7 +112,7 @@
 			Mobile only. Default auto -->
 
 		<!-- <renderMode></renderMode> -->
-		<renderMode>gpu</renderMode>
+		<renderMode>direct</renderMode>
 
 		<!-- Whether or not to pan when a soft keyboard is raised or lowered (either 
 			"pan" or "none"). Optional. Defaults "pan." -->
