@@ -33,9 +33,9 @@
 		private var _mirrored:Boolean;
 		private var _loop:Boolean;
 		
-		
-		// Animated sprite optimized for iPhone and works great on all other devices
-		// this sprite does not mirror or rotate or scale
+		/*
+		same as MobiSprite but handles prerendered mirrored sprites, though after AIR 3.0 it seems transforming DisplayObject does not affect speed
+		*/
 		public function MobiSpriteM(bitmap:Vector.<BitmapData>,bitmapM:Vector.<BitmapData>,speed:Number=1,cam:Camera=null,ix:int = 0,iy:int = 0,offset:Point = null,mirrored:Boolean = false) {
 			super();
 			_speed = speed;

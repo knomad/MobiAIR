@@ -31,10 +31,5 @@ package com.CardGame.Screens
 			super.init();
 		}
 		
-		private function handleReplayButton():void
-		{
-
-		}
-		
 	}
 }

@@ -1,6 +1,5 @@
 ﻿package com.Ammarz.MobiAIR
 {
-	import com.Ammarz.MobiAIR.Graphics.Blit.AnimatedSprite;
 	import com.Ammarz.MobiAIR.Graphics.Animation;
 	import com.Ammarz.MobiAIR.Graphics.DisplayObject.MobiSprite;
 	import com.Ammarz.MobiAIR.Graphics.DisplayObject.MobiSpriteM;
@@ -100,6 +99,9 @@
 			}
 		}
 		
+		/**
+		 * takes a display object and render cache it to a bitmapData, also applies scale
+		 * */
 		public static function dpToBitmap(mc:DisplayObject,frame:int = 0,trans:Boolean = true,width:Number = 0,height:Number = 0,scale:Number = 1):BitmapData
 		{
 			
@@ -159,6 +161,9 @@
 		}
 		*/
 		
+		/**
+		 * renders a movieclip to a horizontal sprite sheet
+		 * */
 		public static function mcToSheet(mc:MovieClip,width:Number = 0,height:Number = 0,scale:Number = 1):BitmapData
 		{
 			mc.stop();

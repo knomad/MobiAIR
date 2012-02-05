@@ -1,19 +1,4 @@
-﻿
-
-/*
-	Animated sprite optimized for iOS, Does not handle mirrors, use iSpritePackM instead
-	Holds multiple animations
-	pass animations as AnimationPackage
-	hint:
-	_animPack = new AnimationPackage();
-	_animPack.addAnimation(utilz.mcToAnimation(new myAnimatedMovieClip1()),"Anim1");
-	_animPack.addAnimation(utilz.mcToAnimation(new myAnimatedMovieClip2()),"Anim2");
-	_animPack.addAnimation(utilz.mcToAnimation(new myAnimatedMovieClip3()),"Anim3");
-	... etc
-*/
-
-
-package com.Ammarz.MobiAIR.Graphics.DisplayObject {
+﻿package com.Ammarz.MobiAIR.Graphics.DisplayObject {
 	import com.Ammarz.MobiAIR.Camera;
 	import com.Ammarz.MobiAIR.GameObject;
 	
@@ -208,23 +193,6 @@ package com.Ammarz.MobiAIR.Graphics.DisplayObject {
 			}
 			
 			_oldFrame = _frame;
-		}
-		
-		public function get X():int
-		{
-			return _position.x;
-		}
-		public function set X(v:int):void
-		{
-			_position.x = v;
-		}
-		public function get Y():int
-		{
-			return _position.y;
-		}
-		public function set Y(v:int):void
-		{
-			_position.y = v;
 		}
 		
 		public function set frameSpeed(v:Number):void

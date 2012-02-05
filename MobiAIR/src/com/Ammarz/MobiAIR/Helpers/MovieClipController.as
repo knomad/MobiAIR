@@ -1,7 +1,11 @@
 package com.Ammarz.MobiAIR.Helpers
 {
 	import flash.display.MovieClip;
-
+	
+	
+	/**
+	 * a class that manually animate movieclips and adds some more functionality like custom speed, timer based frames, reverse, and from, to (frame)
+	 **/
 	public class MovieClipController
 	{
 		
@@ -23,6 +27,9 @@ package com.Ammarz.MobiAIR.Helpers
 			_len = 0;
 		}
 		
+		/**
+		 * adds a movieclip to the list, you can use it to control multiple movieclips at once
+		 * */
 		public function attachMovieClip(mc:MovieClip):void
 		{
 			trace("attach movie clip: " + mc.name);
@@ -31,12 +38,22 @@ package com.Ammarz.MobiAIR.Helpers
 			_movieClips.push(mc);
 		}
 		
+		/**
+		 * remove a movieclip from the control list
+		 * */
 		public function detachMovieClip(mc:MovieClip):void
 		{
 			_len--;
 			_movieClips.splice(_movieClips.indexOf(mc),1);
 		}
 		
+		/**
+		 * sets animation options
+		 * @param loop duh!
+		 * @param speed 1 = normal speed, 0.5 half the speed, 2 double the speed ... etc
+		 * @param start specify which frame the animation start
+		 * @param end the last frame before stopping or looping, 0 continues to the end of the movieclip
+		 * */
 		public function setAnimation(loop:Boolean = true,speed:Number = 1,start:uint = 1,end:uint = 0):void
 		{
 			trace("set animation: " + start.toString() + " , " + end.toString());
@@ -50,7 +67,13 @@ package com.Ammarz.MobiAIR.Helpers
 			else
 				_len > 0 ? _end = _movieClips[0].framesLoaded : _end = 1;
 		}
-
+		
+		
+		/**
+		 * play the animation
+		 * @param setTo aka goto the specified frame then play normally, just like gotoAndPlay, 0 = just leave it alone and play
+		 * @param resetTimer resets the frame timer, you would mostly keep it true
+		 * */
 		public function play(setTo:uint = 0,resetTimer:Boolean = true):void
 		{
 			if (setTo > 0)
@@ -66,14 +89,14 @@ package com.Ammarz.MobiAIR.Helpers
 			_play = true;
 		}
 		
-		public function stop(atFrame:uint):void
+		public function stop(atFrame:uint = 0):void
 		{
 			_play = false;
-			_frame = atFrame;
+			if (atFrame > 0){_frame = atFrame;}
 			updateFrames();
 		}
 		
-		public function updateFrames(frame:uint = 0):void
+		private function updateFrames(frame:uint = 0):void
 		{
 			if (frame > 0)
 				_frame = frame;
@@ -84,14 +107,17 @@ package com.Ammarz.MobiAIR.Helpers
 			}
 		}
 		
-		public function update(gameTime:Number = 1):void
+		/**
+		 * updates the timers and frame switching, call this every enter frame
+		 * */
+		public function update(elapsed:Number = 1):void
 		{
 			if (_play && _len > 0)
 			{
 				
 				updateFrames();
 				
-				_timer += _speed * gameTime;
+				_timer += _speed * elapsed;
 				while (_timer >= 1)
 				{
 					_timer--;

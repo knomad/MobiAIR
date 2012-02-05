@@ -76,11 +76,21 @@ package com.Ammarz.MobiAIR
 			}
 		}
 		
+		/**
+		 * switch the screen to another one, first it fades out, calls dispose on the old screen, calls init on the new screen, then fade in
+		 * @param screen the new screen
+		 * @param transitionSpeed 0 - 1 (I usually use 0.3)
+		 * @param transitionSpeedIn if == 0 the new screen will fade in based on transitionSpeed, while if its > 0 the screen will fade in at that speed
+		 * */
 		public static function setScreen(screen:BaseScreen,transitionSpeed:Number = 0,transitionSpeedIn:Number = 0):void
 		{
 			_screenController.setScreen(screen,transitionSpeed,transitionSpeedIn);
 		}
 		
+		/**
+		 * sets the global scale of the game, useful when adapting different screen resolutions
+		 * I don't suggest changing this after the game is running.
+		 * */
 		public static function set globalScale(v:Number):void
 		{
 			_globalScale = v;
@@ -101,7 +111,7 @@ package com.Ammarz.MobiAIR
 		}
 		
 		/**
-		 * just multiplies the value by the globalScale and returns it
+		 * a shortcut that just multiplies the value passed by the globalScale and returns it
 		 * */
 		public static function applyScale(v:Number):Number
 		{
@@ -116,6 +126,9 @@ package com.Ammarz.MobiAIR
 			return v / _globalScale;
 		}
 		
+		/**
+		 * shows text representing the screen fps at the specified position on the screen
+		 * */
 		public static function enableFPS(px:Number = 10,py:Number = 10):void
 		{
 			_fpsText = new TextField();

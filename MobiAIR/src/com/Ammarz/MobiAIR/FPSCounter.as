@@ -18,7 +18,6 @@
 	 * _yourBall.x += ballSpeed * _fpsCounter.elapsed;
 	 * }
 	 * </listing>
-	 * ASDocs is F***ing stupid!
 	 **/
 	public class FPSCounter
 	{
